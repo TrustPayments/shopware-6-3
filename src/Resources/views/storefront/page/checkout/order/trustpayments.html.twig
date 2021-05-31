@@ -1,0 +1,87 @@
+{% sw_extends '@Storefront/storefront/page/checkout/_page.html.twig' %}
+
+{% block base_header %}
+	{% sw_include '@TrustPaymentsPayment/storefront/page/checkout/order/trustpayments_header.html.twig' %}
+{% endblock %}
+
+{% block base_navigation %}{% endblock %}
+{% block base_body_classes %}trustpayments-payment is-act-confirmpage{% endblock %}
+
+{% block page_checkout_main_content %}
+	{% block page_checkout_pay %}
+		{% block page_checkout_confirm_header %}
+            <h1 class="confirm-main-header">
+                {{ "trustpayments.payHeader"|trans|sw_sanitize }}
+            </h1>
+        {% endblock %}
+
+		{% block page_checkout_pay_order %}
+			<div class="row finish-info">
+				{% block page_checkout_pay_order_address %}
+					<div class="col-md-12 finish-address">
+						{% sw_include '@Storefront/storefront/page/checkout/finish/finish-address.html.twig' %}
+					</div>
+				{% endblock %}
+			</div>
+		{% endblock %}
+
+		{% block page_checkout_pay_order_form %}
+			<div class="row finish-info">
+				<div class="col-md-12">
+					{% sw_include '@TrustPaymentsPayment/storefront/page/checkout/order/trustpayments_payment.html.twig' %}
+				</div>
+			</div>
+		{% endblock %}
+
+		{% block page_checkout_pay_product_table %}
+			<div class="card checkout-product-table">
+				<div class="card-body">
+					{% block page_checkout_pay_table_header %}
+						{% sw_include '@Storefront/storefront/page/checkout/confirm/confirm-product-header.html.twig' %}
+					{% endblock %}
+
+					{% block page_checkout_pay_items %}
+						{% for lineItem in page.order.nestedLineItems %}
+							{% block page_checkout_pay_item %}
+								{% sw_include '@Storefront/storefront/page/checkout/finish/finish-item.html.twig' %}
+							{% endblock %}
+						{% endfor %}
+					{% endblock %}
+				</div>
+			</div>
+		{% endblock %}
+	{% endblock %}
+{% endblock %}
+
+{% block page_checkout_aside_actions %}
+    <div class="checkout-aside-action">
+        <form name="confirmOrderForm" id="confirmOrderForm">
+			<input type="hidden" id="cartRecreateUrl" value="{{ page.extensions.trustPaymentsData.cartRecreateUrl }}" />
+			<input type="hidden" id="checkoutUrl" value="{{ page.extensions.trustPaymentsData.checkoutUrl }}" />
+			<button id="confirmFormSubmit"
+					class="btn btn-primary btn-block btn-lg"
+					form="confirmOrderForm"
+					disabled
+					type="submit">
+				{{ "trustpayments.payButton"|trans|sw_sanitize }}
+			</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block base_footer %}
+	{% sw_include '@Storefront/storefront/layout/footer/footer-minimal.html.twig' %}
+{% endblock %}
+
+{% block base_script_hmr_mode %}
+	{{ parent() }}
+	{% if page.extensions.trustPaymentsData %}
+		{% if page.extensions.trustPaymentsData.deviceJavascriptUrl %}
+			<script src="{{ page.extensions.trustPaymentsData.deviceJavascriptUrl }}" async="async"></script>
+		{% endif %}
+		{% if page.extensions.trustPaymentsData.javascriptUrl %}
+			<script src="{{ page.extensions.trustPaymentsData.javascriptUrl }}"></script>
+		{% endif %}
+		<script type="text/javascript" src="{{ asset('bundles/trustpaymentspayment/storefront/js/app.js') }}"></script>
+	{% endif %}
+{% endblock %}

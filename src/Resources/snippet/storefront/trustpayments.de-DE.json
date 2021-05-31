@@ -1,0 +1,27 @@
+{
+  "trustpayments": {
+    "account": {
+      "downloadInvoice": "Rechnung herunterladen"
+    },
+    "cookie": {
+      "name": "TrustPayments-Zahlungen"
+    },
+    "deliveryState": {
+      "hold": "Halten",
+      "unhold": "Aufheben"
+    },
+    "payButton": "Zahlen",
+    "payHeader": "Bestellung bezahlen",
+    "payload": {
+      "adjustmentLineItem": "Anpassung Einzelposten",
+      "shipping": {
+        "lineItem": "Versand-Einzelposten",
+        "name": "Versand"
+      },
+      "taxes": "Steuern"
+    },
+    "paymentMethod": {
+      "notAvailable": "Die Zahlungsmethode ist derzeit nicht verfügbar. Bitte wählen Sie eine andere Zahlungsmethode."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "authors": [
+        {
+            "homepage": "https://www.trustpayments.com/",
+            "name": "Trust Payments"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TrustPaymentsPayment\\": "src/"
+        }
+    },
+    "conflict": {
+        "shopware/administration": "<6,>=6.4",
+        "shopware/storefront": "<6,>=6.4"
+    },
+    "description": "TrustPayments integration for Shopware 6",
+    "extra": {
+        "copyright": "(c) by Trust Payments",
+        "description": {
+            "de-DE": "TrustPayments integration f\u00fcr Shopware 6",
+            "en-GB": "TrustPayments integration for Shopware 6"
+        },
+        "label": {
+            "de-DE": "TrustPayments Produkte f\u00fcr Shopware 6",
+            "en-GB": "TrustPayments Products for Shopware 6"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.trustpayments.com/",
+            "en-GB": "https://www.trustpayments.com/"
+        },
+        "supportLink": {
+            "de-DE": "https://www.trustpayments.com/contact-us/",
+            "en-GB": "https://www.trustpayments.com/contact-us/"
+        },
+        "shopware-plugin-class": "TrustPaymentsPayment\\TrustPaymentsPayment"
+    },
+    "homepage": "https://www.trustpayments.com//",
+    "keywords": [
+        "Trust Payments",
+        "payment",
+        "php",
+        "shopware"
+    ],
+    "license": "Apache-2.0",
+    "name": "trustpayments/shopware-6-3",
+    "require": {
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "php": ">=7.2",
+        "shopware/core": "~6.2.3 || ~6.3",
+        "shopware/storefront": "~6.2.3 || ~6.3",
+        "trustpayments/sdk": "3.0.0"
+    },
+    "type": "shopware-platform-plugin",
+    "version": "3.1.1"
+}

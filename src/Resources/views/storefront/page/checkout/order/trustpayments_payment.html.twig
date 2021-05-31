@@ -1,0 +1,24 @@
+{% set trustPaymentsData = page.extensions.trustPaymentsData %}
+{% if trustPaymentsData and trustPaymentsData.integration %}
+	{% if trustPaymentsData.integration in ['iframe'] %}
+		{% for transactionPossiblePaymentMethod in trustPaymentsData.transactionPossiblePaymentMethods %}
+			<div class="card checkout-card">
+				<div class="card-body">
+					<div class="card-title">
+						{{ transactionPossiblePaymentMethod.getName() }}
+					</div>
+					<div id="trustpayments-payment-panel"
+						class="trustpayments-payment-panel"
+						data-trustpayments-checkout-plugin="true"
+						data-id="{{ transactionPossiblePaymentMethod.getId() }}">
+						<div id="trustpaymentsLoader"><div></div></div>
+						<input value="false" type="hidden" name="trustpayments_payment_handler_validation_status"
+							form="confirmOrderForm">
+						<div id="trustpayments-payment-iframe"
+							class="trustpayments-payment-iframe"></div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endif %}
