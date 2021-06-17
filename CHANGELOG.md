@@ -1,3 +1,6 @@
+# 3.1.2
+- Fixed tax calculation for custom products
+
 # 3.1.1
 - Use shopware-6-3 repo
 
