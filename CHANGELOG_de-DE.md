@@ -1,3 +1,6 @@
+# 3.1.3
+- Der Name der Versand-Einzelposten wurde korrigiert
+
 # 3.1.2
 - Feste Steuerberechnung für kundenspezifische Produkte
 

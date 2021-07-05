@@ -1,3 +1,6 @@
+# 3.1.3
+- Fixed shipping line item name
+
 # 3.1.2
 - Fixed tax calculation for custom products
 

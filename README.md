@@ -61,7 +61,7 @@ tail -f var/log/trustpayments_payment*.log
 
 ## Documentation
 
-[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6-3/3.1.2/docs/en/documentation.html)
+[Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/shopware-6-3/3.1.3/docs/en/documentation.html)
 
 ## License
 
