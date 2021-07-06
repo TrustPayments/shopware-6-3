@@ -51,8 +51,8 @@
         "php": ">=7.2",
         "shopware/core": "~6.2.3 || ~6.3",
         "shopware/storefront": "~6.2.3 || ~6.3",
-        "trustpayments/sdk": "3.0.0"
+        "trustpayments/sdk": "3.0.1"
     },
     "type": "shopware-platform-plugin",
-    "version": "3.1.3"
+    "version": "3.1.4"
 }

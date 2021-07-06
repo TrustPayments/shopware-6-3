@@ -1,3 +1,6 @@
+# 3.1.4
+- - Aktualisieren Sie das SDK
+
 # 3.1.3
 - Der Name der Versand-Einzelposten wurde korrigiert
 
