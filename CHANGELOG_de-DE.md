@@ -1,3 +1,6 @@
+# 3.1.5
+- Fehler beim Ändern des Lieferstatus behoben
+
 # 3.1.4
 - - Aktualisieren Sie das SDK
 

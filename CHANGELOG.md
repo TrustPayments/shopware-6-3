@@ -1,3 +1,6 @@
+# 3.1.5
+- Fix for delivery state change error
+
 # 3.1.4
 - Update SDK
 
