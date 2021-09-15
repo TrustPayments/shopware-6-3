@@ -1,3 +1,6 @@
+# 3.1.6
+- Checkout form auto submission implemented when iFrame returns no input fields
+
 # 3.1.5
 - Fix for delivery state change error
 

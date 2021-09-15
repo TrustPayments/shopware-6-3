@@ -1,3 +1,6 @@
+# 3.1.6
+- Automatische Übermittlung des Checkout-Formulars implementiert, wenn iFrame keine Eingabefelder zurückgibt
+
 # 3.1.5
 - Fehler beim Ändern des Lieferstatus behoben
 
