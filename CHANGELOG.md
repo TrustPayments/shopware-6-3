@@ -1,3 +1,6 @@
+# 3.1.7
+- Reverted auto-submit on empty iframe as it is not working properly at all cases
+
 # 3.1.6
 - Checkout form auto submission implemented when iFrame returns no input fields
 

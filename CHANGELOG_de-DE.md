@@ -1,3 +1,6 @@
+# 3.1.7
+- Automatisches Senden bei leerem iframe zurückgesetzt, da es nicht in allen Fällen richtig funktioniert
+
 # 3.1.6
 - Automatische Übermittlung des Checkout-Formulars implementiert, wenn iFrame keine Eingabefelder zurückgibt
 
